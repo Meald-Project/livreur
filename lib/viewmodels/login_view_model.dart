@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:meald/models/user.dart';
 import 'dart:convert';
 import 'package:meald/viewmodels/user_view_model.dart';
 

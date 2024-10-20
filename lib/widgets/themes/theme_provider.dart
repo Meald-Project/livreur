@@ -41,6 +41,7 @@ class ThemeProvider with ChangeNotifier {
     _timer = Timer(durationUntilNextThemeChange, _initializeThemeBasedOnTime);
   }
 
+  @override
   void dispose() {
     _timer?.cancel();
     super.dispose();

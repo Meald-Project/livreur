@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class SignupViewModel extends ChangeNotifier {
   final TextEditingController nameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
+  final TextEditingController emailController = TextEditingController(); 
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController = TextEditingController();
 
@@ -24,7 +24,7 @@ class SignupViewModel extends ChangeNotifier {
         'email': emailController.text,
         'motdepasse': passwordController.text,
         'role': 'client',
-      }),
+      }), 
     );
 
     if (response.statusCode == 200) {

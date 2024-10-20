@@ -6,12 +6,6 @@ class ParametresPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Paramètres'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pushNamed(context, '/HomePage_livreur'); // Navigate to the home page
-          },
-        ),
       ),
       body: ListView(
         children: [

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meald/viewmodels/signup_view_model.dart';
 
 class Signup extends StatefulWidget {
-  const Signup({Key? key}) : super(key: key);
+  const Signup({super.key});
 
   @override
   State<Signup> createState() => _SignupState();
@@ -28,18 +28,18 @@ class _SignupState extends State<Signup> {
       ),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).pushNamed('/HomePage_livreur');
+          Navigator.of(context).pushNamed('/creation_livreur');
         },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
         child: Text(
           "S'inscrire",
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
           ),
-        ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
         ),
       ),
     );
