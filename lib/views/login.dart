@@ -3,7 +3,7 @@ import 'package:meald/viewmodels/login_view_model.dart';
 import 'package:meald/viewmodels/user_view_model.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  const Login({super.key});
 
   @override
   State<Login> createState() => _LoginState();
@@ -31,19 +31,19 @@ class _LoginState extends State<Login> {
       child: ElevatedButton(
         onPressed: () {
           // viewModel.login(context);
-          Navigator.of(context).pushNamed('/HomePage_livreur');
+          Navigator.of(context).pushNamed('/homePage_livreur');
 
         },
-        child: Text(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        child: Text( 
           'Se Connecter',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
           ),
-        ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
         ),
       ),
     );
