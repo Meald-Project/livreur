@@ -1,4 +1,4 @@
-package com.example.meald
+package com.example.livreur
 
 import io.flutter.embedding.android.FlutterActivity
 
