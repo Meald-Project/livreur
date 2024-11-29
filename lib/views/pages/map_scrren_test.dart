@@ -54,7 +54,6 @@ class _MapScreenState extends State<MapScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("My Real Position")),
       body: _currentPosition == null
           ? Center(child: CircularProgressIndicator()) // Loading state
           : GoogleMap(
