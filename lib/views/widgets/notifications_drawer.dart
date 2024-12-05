@@ -26,14 +26,12 @@ class Notifications extends StatelessWidget {
       appBar: AppBar(
         title: Text('Notifications'),
       ),
-      body: Expanded(
-        child: ListView.builder(
-          itemCount: notifications.length,
-          itemBuilder: (context, index) {
-            final notification = notifications[index];
-            return NotificationCard(notification: notification);
-          },
-        ),
+      body: ListView.builder(
+        itemCount: notifications.length,
+        itemBuilder: (context, index) {
+          final notification = notifications[index];
+          return NotificationCard(notification: notification);
+        },
       ),
     );
   }
@@ -52,7 +50,8 @@ class NotificationItem {
 class NotificationCard extends StatelessWidget {
   final NotificationItem notification;
 
-  const NotificationCard({Key? key, required this.notification}) : super(key: key);
+  const NotificationCard({Key? key, required this.notification})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +65,8 @@ class NotificationCard extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
-            Icon(Icons.notifications, color: Colors.orange, size: 30), // Bell icon
+            Icon(Icons.notifications,
+                color: Colors.orange, size: 30), // Bell icon
             SizedBox(width: 16), // Spacing between icon and text
             Expanded(
               child: Column(
